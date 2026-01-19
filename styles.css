@@ -359,7 +359,7 @@ body {
 /* Water Resources Section */
 .water-resources {
     padding: 100px 0;
-    background-image: url('images/veggies.jpeg');  /* ← ADD YOUR IMAGE HERE */
+    background-image: url('images/veggies.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -554,89 +554,138 @@ body {
     line-height: 1.6;
 }
 
-/* Contact Section */
+/* Contact Section - UPDATED */
 .contact {
     padding: 100px 0;
     background: var(--light);
 }
 
-.contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-}
-
-.contact-info h2 {
+.contact-title {
+    text-align: center;
     font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.contact-info p {
+.contact-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
     color: var(--gray);
-    margin-bottom: 2rem;
+    font-size: 1.1rem;
     line-height: 1.8;
 }
 
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
-.contact-item strong {
+.contact-card {
+    background-image: url('images/veggies.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(45, 80, 22, 0.85) 0%, rgba(90, 143, 58, 0.75) 100%);
+    z-index: 0;
+}
+
+.contact-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(45, 80, 22, 0.3);
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1.5rem;
     display: block;
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
 }
 
-.contact-item p {
-    color: var(--gray);
-    margin: 0;
+.card-title {
+    font-size: 1.4rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
 }
 
-.contact-item a {
-    color: var(--secondary-color);
+.card-content {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.card-content a {
+    color: #ffffff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
 }
 
-.contact-item a:hover {
-    color: var(--primary-color);
+.card-content a:hover {
+    opacity: 0.8;
     text-decoration: underline;
 }
 
-.contact-form {
+.map-container {
+    width: 100%;
+    height: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    margin-bottom: 3rem;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.farm-location-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
     background: var(--white);
     padding: 2.5rem;
     border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 2px solid #e5e7eb;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+.location-detail strong {
+    display: block;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--secondary-color);
-}
-
-.contact-form button {
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
+.location-detail p {
+    color: var(--gray);
+    line-height: 1.8;
+    margin: 0;
 }
 
 /* Footer */
@@ -719,8 +768,7 @@ body {
     }
 
     .about-grid,
-    .resources-content,
-    .contact-content {
+    .resources-content {
         grid-template-columns: 1fr;
     }
 
@@ -734,6 +782,22 @@ body {
 
     .enterprises-grid,
     .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .map-container {
+        height: 350px;
+    }
+    
+    .contact-title {
+        font-size: 2rem;
+    }
+    
+    .farm-location-info {
         grid-template-columns: 1fr;
     }
 }
