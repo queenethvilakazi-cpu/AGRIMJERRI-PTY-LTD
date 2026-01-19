@@ -125,22 +125,6 @@ if (statsSection) {
     statsObserver.observe(statsSection);
 }
 
-// Form Submission
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form values
-        const formData = new FormData(contactForm);
-        
-        // Show success message
-        alert('Thank you for your message! We will get back to you soon.');
-        
-        // Reset form
-        contactForm.reset();
-    });
-}
 
 // Gallery Lightbox Effect
 const galleryItems = document.querySelectorAll('.gallery-item');
