@@ -288,40 +288,74 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section - UPDATED -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2>Get In Touch</h2>
-                    <p>Learn more about partnership opportunities and how AGRIMJERRI is delivering sustainable agricultural development in Thaba Chweu.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <strong>Location</strong>
-                            <p>Farm Doornhoek 545 KT<br>Thaba Chweu Local Municipality<br>Mpumalanga Province</p>
-                        </div>
-                        <div class="contact-item">
-                            <strong>Company</strong>
-                            <p>AGRIMJERRI (Pty) Ltd</p>
-                        </div>
-                        <div class="contact-item">
-                            <strong>Phone</strong>
-                            <p><a href="tel:+27123456789">+27 12 345 6789</a></p>
-                        </div>
-                        <div class="contact-item">
-                            <strong>Email</strong>
-                            <p><a href="mailto:info@agrimjerri.co.za">info@agrimjerri.co.za</a></p>
-                        </div>
-                    </div>
+            <h2 class="contact-title">Get In Touch</h2>
+            <p class="contact-intro">Learn more about partnership opportunities and how AGRIMJERRI is delivering sustainable agricultural development.</p>
+            
+            <div class="contact-cards">
+                <!-- Phone Card -->
+                <div class="contact-card phone-card">
+                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                    <h3 class="card-title">+27 66 552 7362</h3>
+                    <p class="card-content">
+                        <a href="tel:+27665527362">Call us directly</a><br>
+                        Available during business hours
+                    </p>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <input type="tel" placeholder="Phone Number">
-                        <textarea placeholder="Message" rows="5" required></textarea>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+
+                <!-- Email Card -->
+                <div class="contact-card email-card">
+                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <h3 class="card-title">admin@agrimjerri.com</h3>
+                    <p class="card-content">
+                        <a href="mailto:admin@agrimjerri.com">Send us an email</a><br>
+                        We'll respond within 24 hours
+                    </p>
+                </div>
+
+                <!-- Location Card -->
+                <div class="contact-card location-card">
+                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <h3 class="card-title">Administrative Office</h3>
+                    <p class="card-content">
+                        8189 Ekukhanyeni<br>
+                        Mpumalanga<br>
+                    
+                    </p>
+                </div>
+            </div>
+
+            <!-- Google Maps Embed -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.5441479208697!2d28.23424887542053!3d-25.66895297738766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9560d7e8c8d8d9%3A0x5e5e5e5e5e5e5e5e!2s786%20Wilger%20Rd%2C%20Doornpoort%2C%20Pretoria%2C%200186!5e0!3m2!1sen!2sza!4v1705680000000!5m2!1sen!2sza" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Farm Location Info -->
+            <div class="farm-location-info">
+                <div class="location-detail">
+                    <strong>Farm Location:</strong>
+                    <p>Farm Doornhoek 545 KT<br>Thaba Chweu Local Municipality<br>Mpumalanga Province</p>
+                </div>
+                <div class="location-detail">
+                    <strong>Company:</strong>
+                    <p>AGRIMJERRI (Pty) Ltd</p>
                 </div>
             </div>
         </div>
